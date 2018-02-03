@@ -275,5 +275,16 @@
         app:layout_constraintStart_toEndOf="@+id/R8"
         app:srcCompat="@drawable/red" />
 
+    <Button
+        android:id="@+id/start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginTop="125dp"
+        android:onClick="start"
+        android:text="Start "
+        app:layout_constraintEnd_toEndOf="@+id/B8"
+        app:layout_constraintTop_toTopOf="@+id/B8" />
+
 
 </android.support.constraint.ConstraintLayout>

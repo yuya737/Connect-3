@@ -2,18 +2,13 @@ package com.example.yuyakawakami.connect3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-
     Board board;
-
     int round = 0;
-
-
 
     public class Board{
 
@@ -21,16 +16,16 @@ public class MainActivity extends AppCompatActivity {
         Boolean [][] yellow;
         Pair solved;
 
-        public class Pair {
+        private class Pair {
             int player;
             Boolean solved;
 
-            public Pair(Boolean solved){
+            private Pair(Boolean solved){
                 this.player = 0;
                 this.solved = solved;
             }
 
-            public void set(int player, Boolean solved){
+            private void set(int player, Boolean solved){
                 this.player = player;
                 this.solved = solved;
             }
@@ -39,28 +34,30 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-        public Board(){
+        private Board(){
             this.red = new Boolean [3][3];
             this.yellow = new Boolean [3][3];
             this.solved = new Pair(false);
 
-            for (int i = 0; i < 3; i++){
-                red[i][i] = false;
-                yellow[i][i] = false;
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    red[i][j] = false;
+                    yellow[i][j] = false;
+                }
             }
         }
 
-        public Boolean isSolved(){
+        private Boolean isSolved(){
             return this.solved.solved;
         }
 
-        public void check(){
+        private void check(){
             checkVerticals();
             checkHorizontals();
             checkDiagonals();
         }
 
-        public void checkVerticals(){
+        private void checkVerticals(){
             for (int i = 0; i < 3; i++){
                 if (red[0][i] && red[1][i] && red[2][i]){
                     solved.set(1, true);
@@ -73,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        public void checkHorizontals(){
+        private void checkHorizontals(){
             for (int i = 0; i < 3; i++){
                 if (red[i][0] && red[i][1] && red[i][1]){
                     solved.set(1, true);
@@ -86,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        public void checkDiagonals(){
+        private void checkDiagonals(){
             if ((red[0][0] && red[1][1] && red[2][2]) || (red[2][0] && red[1][1] && red[0][2])){
                 solved.set(1, true);
             }
@@ -109,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
             Y1.animate().alpha(1f).setDuration(100);
             board.yellow[0][0] = true;
         }
+        round++;
     }
     public void click2(View view){
         if (this.round % 2 == 0){
@@ -121,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
             Y2.animate().alpha(1f).setDuration(100);
             board.yellow[0][1] = true;
         }
-
+        round++;
     }
     public void click3(View view){
         if (this.round % 2 == 0){
@@ -134,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
             Y3.animate().alpha(1f).setDuration(100);
             board.yellow[0][2] = true;
         }
-
+        round++;
     }
     public void click4(View view){
         if (this.round % 2 == 0){
@@ -147,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             Y4.animate().alpha(1f).setDuration(100);
             board.yellow[1][0] = true;
         }
-
+        round++;
     }
     public void click5(View view){
         if (this.round % 2 == 0){
@@ -160,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             Y5.animate().alpha(1f).setDuration(100);
             board.yellow[1][1] = true;
         }
-
+        round++;
     }
     public void click6(View view){
         if (this.round % 2 == 0){
@@ -173,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             Y6.animate().alpha(1f).setDuration(100);
             board.yellow[1][2] = true;
         }
-
+        round++;
     }
     public void click7(View view){
         if (this.round % 2 == 0){
@@ -186,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
             Y7.animate().alpha(1f).setDuration(100);
             board.yellow[2][0] = true;
         }
-
+        round++;
     }
     public void click8(View view){
         if (this.round % 2 == 0){
@@ -199,7 +197,7 @@ public class MainActivity extends AppCompatActivity {
             Y8.animate().alpha(1f).setDuration(100);
             board.yellow[2][1] = true;
         }
-
+        round++;
     }
     public void click9(View view){
         if (this.round % 2 == 0){
@@ -212,25 +210,32 @@ public class MainActivity extends AppCompatActivity {
             Y9.animate().alpha(1f).setDuration(100);
             board.yellow[2][2] = true;
         }
+        round++;
+    }
 
+    public void start(View view){
+        this.board = new Board();
+        while (round < 9 || !board.isSolved()){
+            board.check();
+        }
+        if (board.solved.player == 0){
+            Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+        }
+        else if (board.solved.player == 1){
+            Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+        }
+        else {
+            Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+        }
+        
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        this.board = new Board();
-        while (round < 9 || !board.isSolved()){
-            board.check();
-        }
-        if (board.solved.player == 0){
-            Toast.makeText(this, "Draw", Toast.LENGTH_LONG);
-        }
-        else if (board.solved.player == 1){
-            Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG);
-        }
-        else {
-            Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG);
-        }
+
     }
+
+
 }
