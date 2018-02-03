@@ -2,6 +2,7 @@ package com.example.yuyakawakami.connect3;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -216,6 +217,7 @@ public class MainActivity extends AppCompatActivity {
     public void start(View view){
         this.board = new Board();
         while (round < 9 || !board.isSolved()){
+            Log.i("Current round: ", Integer.toString(round));
             board.check();
         }
         if (board.solved.player == 0){
@@ -227,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
         else {
             Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
         }
-        
+
     }
 
     @Override
