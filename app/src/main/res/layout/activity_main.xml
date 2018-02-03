@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.yuyakawakami.connect3.MainActivity">
+
+    <ImageView
+        android:id="@+id/Board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/board"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <ImageView
+        android:id="@+id/R1"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R4"
+        app:layout_constraintEnd_toStartOf="@+id/R2"
+        app:layout_constraintTop_toTopOf="@+id/R2"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R2"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/R3"
+        app:layout_constraintTop_toTopOf="@+id/R3"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R3"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R6"
+        app:layout_constraintStart_toStartOf="@+id/R6"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R4"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/R5"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R5"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/R4"
+        app:layout_constraintTop_toBottomOf="@+id/R2"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R6"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R9"
+        app:layout_constraintStart_toEndOf="@+id/R5"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R7"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/R5"
+        app:layout_constraintTop_toTopOf="@+id/R8"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R8"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/R7"
+        app:layout_constraintTop_toTopOf="@+id/R9"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/R9"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Board"
+        app:layout_constraintStart_toEndOf="@+id/R8"
+        app:srcCompat="@drawable/red" />
+
+    <ImageView
+        android:id="@+id/Y1"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/Y4"
+        app:layout_constraintEnd_toStartOf="@+id/Y2"
+        app:layout_constraintTop_toTopOf="@+id/Y2"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y2"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/Y3"
+        app:layout_constraintTop_toTopOf="@+id/Y3"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y3"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/Y6"
+        app:layout_constraintStart_toStartOf="@+id/Y6"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y4"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Y5"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y5"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/Y4"
+        app:layout_constraintTop_toBottomOf="@+id/Y2"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y6"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/Y9"
+        app:layout_constraintStart_toEndOf="@+id/Y5"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y7"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toStartOf="@+id/Y5"
+        app:layout_constraintTop_toTopOf="@+id/Y8"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y8"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        app:layout_constraintStart_toEndOf="@+id/Y7"
+        app:layout_constraintTop_toTopOf="@+id/Y9"
+        app:srcCompat="@drawable/yellow" />
+
+    <ImageView
+        android:id="@+id/Y9"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Board"
+        app:layout_constraintStart_toEndOf="@+id/Y8"
+        app:srcCompat="@drawable/yellow" />
+
+    <Button
+        android:id="@+id/B1"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R4"
+        app:layout_constraintEnd_toStartOf="@+id/R2"
+        app:layout_constraintTop_toTopOf="@+id/R2"  />
+
+    <Button
+        android:id="@+id/B2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/R3"
+        app:layout_constraintTop_toTopOf="@+id/R3"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B3"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R6"
+        app:layout_constraintStart_toStartOf="@+id/R6"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/R5"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/R4"
+        app:layout_constraintTop_toBottomOf="@+id/R2"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B6"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/R9"
+        app:layout_constraintStart_toEndOf="@+id/R5"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B7"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintEnd_toStartOf="@+id/R5"
+        app:layout_constraintTop_toTopOf="@+id/R8"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B8"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:layout_constraintStart_toEndOf="@+id/R7"
+        app:layout_constraintTop_toTopOf="@+id/R9"
+        app:srcCompat="@drawable/red" />
+
+    <Button
+        android:id="@+id/B9"
+        android:layout_width="130dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="59dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Board"
+        app:layout_constraintStart_toEndOf="@+id/R8"
+        app:srcCompat="@drawable/red" />
+
+
+</android.support.constraint.ConstraintLayout>
