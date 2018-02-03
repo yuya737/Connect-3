@@ -21,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
             int player;
             Boolean solved;
 
-            private Pair(Boolean solved){
+            private Pair(){
                 this.player = 0;
-                this.solved = solved;
+                this.solved = false;
             }
 
             private void set(int player, Boolean solved){
@@ -36,9 +36,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         private Board(){
+            Log.i("Starting Board", "");
             this.red = new Boolean [3][3];
             this.yellow = new Boolean [3][3];
-            this.solved = new Pair(false);
+            this.solved = new Pair();
 
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -48,9 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-        private Boolean isSolved(){
-            return this.solved.solved;
-        }
+        private Boolean isSolved(){ return this.solved.solved;}
 
         private void check(){
             checkVerticals();
@@ -73,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         private void checkHorizontals(){
             for (int i = 0; i < 3; i++){
-                if (red[i][0] && red[i][1] && red[i][1]){
+                if (red[i][0] && red[i][1] && red[i][2]){
                     solved.set(1, true);
                     break;
                 }
@@ -108,6 +107,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[0][0] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click2(View view){
         if (this.round % 2 == 0){
@@ -121,6 +130,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[0][1] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click3(View view){
         if (this.round % 2 == 0){
@@ -134,6 +153,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[0][2] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click4(View view){
         if (this.round % 2 == 0){
@@ -147,6 +176,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[1][0] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click5(View view){
         if (this.round % 2 == 0){
@@ -160,6 +199,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[1][1] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click6(View view){
         if (this.round % 2 == 0){
@@ -173,6 +222,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[1][2] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click7(View view){
         if (this.round % 2 == 0){
@@ -186,6 +245,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[2][0] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click8(View view){
         if (this.round % 2 == 0){
@@ -199,6 +268,16 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[2][1] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
     public void click9(View view){
         if (this.round % 2 == 0){
@@ -212,32 +291,25 @@ public class MainActivity extends AppCompatActivity {
             board.yellow[2][2] = true;
         }
         round++;
+        board.check();
+        if (board.isSolved() || round == 9) {
+            if (board.solved.player == 0) {
+                Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
+            } else if (board.solved.player == 1) {
+                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+            }
+        }
     }
 
-    public void start(View view){
-        this.board = new Board();
-        while (round < 9 || !board.isSolved()){
-            Log.i("Current round: ", Integer.toString(round));
-            board.check();
-        }
-        if (board.solved.player == 0){
-            Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
-        }
-        else if (board.solved.player == 1){
-            Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
-        }
-        else {
-            Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
-        }
 
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        this.board = new Board();
     }
-
-
 }
+
