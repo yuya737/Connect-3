@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/Board"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="384dp"
+        android:layout_height="520dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/board" />
@@ -194,7 +194,7 @@
         android:layout_height="130dp"
         android:layout_marginBottom="16dp"
         android:onClick="click1"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@+id/R4"
         app:layout_constraintEnd_toStartOf="@+id/R2"
         app:layout_constraintTop_toTopOf="@+id/R2" />
@@ -204,7 +204,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:onClick="click2"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintEnd_toStartOf="@+id/R3"
         app:layout_constraintTop_toTopOf="@+id/R3"
         app:srcCompat="@drawable/red" />
@@ -215,7 +215,7 @@
         android:layout_height="130dp"
         android:layout_marginBottom="16dp"
         android:onClick="click3"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@+id/R6"
         app:layout_constraintStart_toStartOf="@+id/R6"
         app:srcCompat="@drawable/red" />
@@ -225,7 +225,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:onClick="click4"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/R5"
         app:srcCompat="@drawable/red" />
@@ -236,7 +236,7 @@
         android:layout_height="130dp"
         android:layout_marginTop="16dp"
         android:onClick="click5"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintStart_toEndOf="@+id/R4"
         app:layout_constraintTop_toBottomOf="@+id/R2"
         app:srcCompat="@drawable/red" />
@@ -247,7 +247,7 @@
         android:layout_height="130dp"
         android:layout_marginBottom="16dp"
         android:onClick="click6"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintBottom_toTopOf="@+id/R9"
         app:layout_constraintStart_toEndOf="@+id/R5"
         app:srcCompat="@drawable/red" />
@@ -257,7 +257,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:onClick="click7"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintEnd_toStartOf="@+id/R5"
         app:layout_constraintTop_toTopOf="@+id/R8"
         app:srcCompat="@drawable/red" />
@@ -267,7 +267,7 @@
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:onClick="click8"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintStart_toEndOf="@+id/R7"
         app:layout_constraintTop_toTopOf="@+id/R9"
         app:srcCompat="@drawable/red" />
@@ -279,11 +279,32 @@
         android:layout_height="120dp"
         android:layout_marginBottom="59dp"
         android:onClick="click9"
-        android:alpha="0.1"
+        android:alpha="0"
         app:layout_constraintBottom_toBottomOf="@+id/Board"
         app:layout_constraintStart_toEndOf="@+id/R8"
         app:srcCompat="@drawable/red" />
 
+    <EditText
+        android:id="@+id/player1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Player 1 name..."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/B9"
+        app:layout_constraintTop_toBottomOf="@+id/B7" />
+
+    <EditText
+        android:id="@+id/player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:hint="Player 2 name..."
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/player1"
+        app:layout_constraintTop_toBottomOf="@+id/player1" />
 
 
 </android.support.constraint.ConstraintLayout>

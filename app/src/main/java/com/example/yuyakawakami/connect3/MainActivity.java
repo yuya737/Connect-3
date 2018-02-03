@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -108,13 +109,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Yellow Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -131,13 +137,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -154,13 +165,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -177,13 +193,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -200,13 +221,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -223,13 +249,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -246,13 +277,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -269,13 +305,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
@@ -292,13 +333,18 @@ public class MainActivity extends AppCompatActivity {
         }
         round++;
         board.check();
+        EditText player1 = findViewById(R.id.player1);
+        EditText player2 = findViewById(R.id.player2);
+
+        String p1 = player1.getText().toString();
+        String p2 = player2.getText().toString();
         if (board.isSolved() || round == 9) {
             if (board.solved.player == 0) {
                 Toast.makeText(this, "Draw", Toast.LENGTH_LONG).show();
             } else if (board.solved.player == 1) {
-                Toast.makeText(this, "Red Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p1 + " Wins!", Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this, "Yellow Wins!", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, p2 + " Wins!", Toast.LENGTH_LONG).show();
             }
         }
     }
